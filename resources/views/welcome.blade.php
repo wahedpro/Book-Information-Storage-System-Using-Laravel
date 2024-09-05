@@ -10,13 +10,15 @@
 </head>
 
 <body>
-    <header class="w-4/5 mx-auto">
+    <!-- This is header section -->
+    <header class="w-4/5 mx-auto border-b-2 border-gray-400">
         <div class="py-8 flex justify-between items-center">
             <h1 class="text-3xl font-semibold">Book Information Storage System</h1>
             <a href="/create" class="bg-gray-400 text-white py-2 px-5">Add new book</a>
         </div>
     </header>
-    <main class="w-4/5 mx-auto">
+    <!-- Main section -->
+    <main class="w-4/5 mx-auto pt-10">
         <div>
             <div class="flex flex-col">
                 <div class="-m-1.5 overflow-x-auto">
@@ -40,20 +42,27 @@
                                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ $bookstore->Publisher }}</td>
                                             <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-800">{{ $bookstore->YearPublished }}</td>
                                             <td class="px-6 py-4 whitespace-nowrap text-end text-sm font-medium">
-                                                <a href="{{ route('edit',$bookstore->id) }}">Edit</a>
-                                                <a href="{{ route('delete',$bookstore->id) }}">Delete</a>
+                                                <a class="bg-gray-400 text-white py-2 px-5" href="{{ route('edit',$bookstore->id) }}">Edit</a>
+                                                <a class="bg-gray-400 text-white py-2 px-5" href="{{ route('delete',$bookstore->id) }}">Delete</a>
                                             </td>
                                         </tr>
                                     @endforeach
                                 </tbody>
                             </table>
-                            {{ $bookstores->links() }}
                         </div>
                     </div>
                 </div>
             </div>
+            {{ $bookstores->links() }}
         </div>
     </main>
+    <!-- This is footer section -->
+    <footer class="pt-10">
+        <div class="w-4/5 mx-auto border-t-2 border-gray-400 text-center pt-3">
+            <h3 class="">Wahidul Islam</h3>
+            <h3>Roll: 2104010202248</h3>
+        </div>
+    </footer>
 </body>
 
 </html>

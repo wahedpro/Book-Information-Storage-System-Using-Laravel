@@ -5,7 +5,7 @@ use App\Models\StoreBook;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome',['bookstores'=>StoreBook::paginate(3)]);
+    return view('welcome',['bookstores'=>StoreBook::paginate(5)]);
 })->name('home');
 
 
